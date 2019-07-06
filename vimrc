@@ -37,6 +37,7 @@ map  <C-l> :tabn<CR>
 map  <C-n> :tabnew<CR>
 nmap <C-b> :NERDTreeToggle<CR>
 
+let g:xptemplate_brace_complete = "([{\"'"
 
 call plug#begin()
   Plug 'kien/ctrlp.vim'
@@ -46,11 +47,13 @@ call plug#begin()
   Plug 'prettier/vim-prettier'
   Plug 'itchyny/lightline.vim'
   Plug 'pangloss/vim-javascript'
-  Plug 'tomasiser/vim-code-dark'
+  "Plug 'tomasiser/vim-code-dark'"
   Plug 'vim-syntastic/syntastic'
   "Plug 'flazz/vim-colorschemes'"
   Plug 'terryma/vim-multiple-cursors'
-call plug#end()
-colorscheme codedark
-autocmd VimEnter * NERDTree
+  Plug 'drmingdrmer/xptemplate'
+  Plug 'terryma/vim-multiple-cursors'
 
+call plug#end()
+"colorscheme codedark"
+autocmd VimEnter * NERDTree
