@@ -1,27 +1,43 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'blueshirts/darcula'
+Plug 'Yggdroot/indentLine'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
+Plug 'vim-syntastic/syntastic'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
 Plug 'christoomey/vim-tmux-navigator'
-
 Plug 'morhetz/gruvbox'
-
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+Plug 'leafgarland/typescript-vim'
+Plug 'lifepillar/vim-solarized8'
+
 
 " Initialize plugin system
 call plug#end()
 
 inoremap jk <ESC>
+"inoremap { {}<left>
+"inoremap {{ {
+"inoremap {} {}
+"inoremap [ []<left>
+"inoremap [[ [
+"inoremap [] []
+"inoremap ( ()<left>
+"inoremap (( (
+"inoremap () ()
+"inoremap " ""<left>
+"inoremap "" ""
+"inoremap ' ''<left>
+"inoremap '' ''
 nmap <C-t> :NERDTreeToggle<CR>
 map  <C-h> :tabp<CR>
 map  <C-l> :tabn<CR>
@@ -69,6 +85,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+set number 
+set conceallevel=0
 set relativenumber
 set term=screen-256color
 set ic
@@ -85,7 +103,12 @@ set expandtab
 
 "colorscheme gruvbox
 "colorscheme afterglow 
-colorscheme onedark 
+"colorscheme onedark 
+"colorscheme darcula 
+"colorscheme solarized8_flat 
+"colorscheme solarized8 
+"colorscheme solarized8_low 
+colorscheme solarized8_high
 
 " coc config
 let g:coc_global_extensions = [
@@ -96,15 +119,25 @@ let g:coc_global_extensions = [
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ ]
-" from readme
+
 " if hidden is not set, TextEdit might fail.
-set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
+set hidden
+
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 
 " always show signcolumns
+set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -150,10 +183,10 @@ function! s:show_documentation()
 endfunction
 
 " Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <F2> <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
@@ -164,7 +197,7 @@ augroup mygroup
   " Setup formatexpr specified filetype(s).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder
-  "autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
