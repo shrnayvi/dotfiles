@@ -101,7 +101,6 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
-"colorscheme gruvbox
 "colorscheme afterglow 
 "colorscheme onedark 
 "colorscheme darcula 
@@ -109,6 +108,9 @@ set expandtab
 "colorscheme solarized8 
 "colorscheme solarized8_low 
 colorscheme solarized8_high
+"colorscheme gruvbox
+
+set bg=dark
 
 " coc config
 let g:coc_global_extensions = [
@@ -216,8 +218,8 @@ omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <C-d> <Plug>(coc-range-select)
-xmap <silent> <C-d> <Plug>(coc-range-select)
+"nmap <silent> <C-d> <Plug>(coc-range-select)
+"nmap <silent> <C-d> <Plug>(coc-range-select)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
