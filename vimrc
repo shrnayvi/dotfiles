@@ -1,19 +1,21 @@
 syntax on
 
 set noerrorbells
-set tabstop=4 softtabstop=4
-set smartindent
+set noswapfile
+set tabstop=4 
+set softtabstop=4
 set shiftwidth=4 
+set smartindent
 set expandtab
 set nowrap
-set noswapfile
+set number
 set relativenumber
 set ignorecase
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undo
 set undofile
 set incsearch
-set number
+set mouse=a
 
 call plug#begin('~/.vim/plugged')
 
@@ -47,16 +49,15 @@ endif
 
 let mapleader = " "
 
-"let g:ctrlp_use_caching = 0
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-g> :Files<CR>
@@ -68,4 +69,3 @@ map <leader>pp mz:-lr !xclip -o -set clip<CR>
 
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
-
