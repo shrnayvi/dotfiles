@@ -42,7 +42,8 @@ Plug 'nikvdp/ejs-syntax'
 Plug 'tomasiser/vim-code-dark' 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'neoclide/coc-tsserver'
+Plug 'ianks/vim-tsx'
+
 
 call plug#end()
 
