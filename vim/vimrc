@@ -15,6 +15,8 @@ set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set number
+set laststatus=2
+set background=dark
 
 call plug#begin('~/.vim/plugged')
 
@@ -49,7 +51,6 @@ call plug#end()
 
 ""colorscheme gruvbox
 colorscheme codedark
-set background=dark
 
 if executable('rg') 
     let g:rg_derive_root='true'
@@ -73,7 +74,11 @@ nnoremap <C-h> gT<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-g> :Files<CR>
 
-set laststatus=2
+"Replace the highlighted/searched word
+nnoremap <leader>r :%s///g<Left><Left>
+
+"Clear search highlights.
+map <Leader>c :nohlsearch<CR>
 
 vmap <leader>yy :!xclip -f -sel clip<CR>    
 map <leader>pp mz:-lr !xclip -o -set clip<CR>
