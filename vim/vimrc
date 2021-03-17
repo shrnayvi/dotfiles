@@ -80,6 +80,12 @@ nnoremap <leader>r :%s///g<Left><Left>
 "Clear search highlights.
 map <Leader>c :nohlsearch<CR>
 
+"Toggle ignore case
+map <Leader>\s :set ignorecase!<CR>
+
+"Toggle highlight search
+nnoremap <leader>\h :set hlsearch!<CR>
+
 vmap <leader>yy :!xclip -f -sel clip<CR>    
 map <leader>pp mz:-lr !xclip -o -set clip<CR>
 
