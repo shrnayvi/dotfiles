@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/iw/.oh-my-zsh"
 
-ZSH_THEME="ys"
+ZSH_THEME="candy"
 
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
