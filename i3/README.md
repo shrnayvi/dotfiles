@@ -33,4 +33,10 @@ Install pavucontrol
 $ sudo apt-get install pavucontrol
 ```
 
+## Wallpaper
+```
+Install feh
+$ sudo apt-get install feh
 
+Add a image file with wallpaper.jpg: ~/Pictures/wallpaper.jpg
+```
