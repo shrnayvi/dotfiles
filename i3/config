@@ -178,10 +178,10 @@ bindsym $mod+Shift+period move workspace to output right
 bindsym $mod+Shift+comma workspace to output left 
 
 # resize
-bindsym $mod+Shift+u resize shrink width 10 px or 10ppt
-bindsym $mod+Shift+i resize shrink height 10 px or 10ppt
+bindsym $mod+Shift+y resize shrink width 10 px or 10ppt
+bindsym $mod+Shift+u resize shrink height 10 px or 10ppt
+bindsym $mod+Shift+i width resize grow height 10 px or 10ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10ppt
-bindsym $mod+Shift+p resize grow height 10 px or 10ppt
 
 bindsym $mod+bracketright exec $flash
 
@@ -190,8 +190,12 @@ bindsym $mod+Shift+g exec google-chrome
 
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 
+# window colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #d9d9d9 #cecece #000000 #d9d9d9 #d9d9d9
+
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 
 # i3 gaps
 gaps inner 5
