@@ -40,3 +40,7 @@ $ sudo apt-get install feh
 
 Add a image file with wallpaper.jpg: ~/Pictures/wallpaper.jpg
 ```
+
+## i3-gaps
+
+Install i3-gaps: https://github.com/shrnayvi/i3
