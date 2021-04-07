@@ -211,3 +211,9 @@ bindsym $mod+d gaps inner all set 5; gaps outer all set 5
 # Reset gaps to 0
 bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0 
 
+# assign [class="Microsoft Teams - Preview"] $ws10
+assign [class="Google-chrome"] $ws2
+
+# Resolution. Change accordingly
+# exec xrandr --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --primary --mode 1600x900 --pos 1920x0 --rotate normal
+
