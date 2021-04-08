@@ -164,7 +164,9 @@ bar {
         }
 }
 
-bindsym $mod+Shift+x exec i3lock --color=000000
+# bindsym $mod+Shift+x exec i3lock --color=000000
+ bindsym $mod+Shift+x exec ~/.config/i3/lock.sh
+
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -217,8 +219,34 @@ bindsym $mod+d gaps inner all set 5; gaps outer all set 5
 # Reset gaps to 0
 bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0 
 
+# keybinding for sracthpad
+bindsym $mod+t [title="floatingterminal"] scratchpad show; [title="floatingterminal"] move position center
+
+# Toggle the floating
+bindsym $mod+Shift+plus floating toggle
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+
+assign [class="Microsoft Teams - Preview"] $ws10
 assign [class="Google-chrome"] $ws2
+assign [class="viber"] $ws8
+
+# Resolution. Change accordingly
+exec --no-startup-id xrandr --output eDP-1 --primary --mode 1600x900 --pos 1920x0 --rotate normal
 
 # Resolution. Change accordingly
 #exec_always xrandr --output DP-1 --off --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output eDP-1 --primary --mode 1600x900 --pos 1920x0 --rotate normal
+
+# settings for dropdown
+for_window [title="floatingterminal"] floating enable
+for_window [title="floatingterminal"] resize set 625 400
+for_window [title="floatingterminal"] move scratchpad
+for_window [title="floatingterminal"] border pixel 2
+# start flaoting terminal scratchpad 
+exec --no-startup-id gnome-terminal -t floatingterminal -e tmux
 
