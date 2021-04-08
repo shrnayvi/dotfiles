@@ -44,3 +44,17 @@ Add a image file with wallpaper.jpg: ~/Pictures/wallpaper.jpg
 ## i3-gaps
 
 Install i3-gaps: https://github.com/shrnayvi/i3
+
+## Lock screen
+Requirements: 
+
+ffmpeg:
+```
+$ sudo apt-get install ffmpeg
+```
+
+Copy lock.jpg to ~/Pictures/lock/jpg
+
+Copy lock.sh file to ~/.config/i3/lock.sh and make executable file
+chmod +x lock.sh
+
