@@ -170,9 +170,12 @@ bar {
 
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
@@ -235,7 +238,8 @@ bindsym --release Shift+Ctrl+Print exec gnome-screenshot -acf /tmp/test && cat /
 # Assign apps to workspaces 
 assign [class="Microsoft Teams - Preview"] $ws10
 assign [class="Google-chrome"] $ws2
-assign [class="viber"] $ws8
+assign [class="ViberPC"] $ws3
+assign [class="Skype"] $ws3
 
 # Resolution. Change accordingly
 exec --no-startup-id xrandr --output eDP-1 --primary --mode 1600x900 --pos 1920x0 --rotate normal
