@@ -149,10 +149,11 @@ bar {
         position top 
         #status_command i3status
         status_command i3status -c ~/.config/i3/i3status.conf
+
         bindsym button1 nop
 
         colors {
-            background #404040
+            background #282c34
             statusline #d3ffa3
             separator #ffe5b0
 
@@ -186,24 +187,22 @@ bindsym $mod+Shift+u resize shrink height 10 px or 10ppt
 bindsym $mod+Shift+i resize grow height 10 px or 10ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10ppt
 
-bindsym $mod+bracketright exec $flash
-
 # applications
 bindsym $mod+Shift+g exec google-chrome
 
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
-exec compton
+exec --no-startup-id compton
 
 # window colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #d9d9d9 #cecece #000000 #d9d9d9 #d9d9d9
+client.focused          #d9d9d9 #cecece #000000 #d9d9d9   #8dbd5b 
 
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 # i3 gaps
-gaps inner 5
-gaps outer 5
+#gaps inner 5
+#gaps outer 5
 
 # outer gaps
 bindsym $mod+slash gaps outer current plus 5
@@ -222,16 +221,18 @@ bindsym $mod+Shift+d gaps inner all set 0; gaps outer all set 0
 # keybinding for sracthpad
 bindsym $mod+t [title="floatingterminal"] scratchpad show; [title="floatingterminal"] move position center
 
-# Toggle the floating
-bindsym $mod+Shift+plus floating toggle
-
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
 
+bindsym --release Print exec gnome-screenshot 
+bindsym --release $mod+Print exec "gnome-screenshot -c"
+bindsym --release Shift+Print exec "gnome-screenshot -a"
+bindsym --release Shift+Ctrl+Print exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
 
+# Assign apps to workspaces 
 assign [class="Microsoft Teams - Preview"] $ws10
 assign [class="Google-chrome"] $ws2
 assign [class="viber"] $ws8
