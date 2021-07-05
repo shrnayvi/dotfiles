@@ -45,12 +45,11 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'ianks/vim-tsx'
-
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
-""colorscheme gruvbox
-colorscheme codedark
+colorscheme gruvbox
 
 if executable('rg') 
     let g:rg_derive_root='true'
@@ -112,5 +111,4 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
-
 
