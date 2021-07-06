@@ -112,3 +112,7 @@ function! LightlineFilename()
   return expand('%')
 endfunction
 
+"Toggle indent line
+nmap <leader>i :IndentLinesToggle<CR>
+let g:indentLine_char_list = ['│']  "¦, ┆, │, ⎸, ▏
+
