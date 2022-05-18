@@ -44,11 +44,13 @@ Plug 'nikvdp/ejs-syntax'
 Plug 'tomasiser/vim-code-dark' 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'ianks/vim-tsx'
+"Plug 'ianks/vim-tsx'
 Plug 'Yggdroot/indentLine'
 Plug 'jparise/vim-graphql'
 Plug 'leafOfTree/vim-vue-plugin'
 Plug 'szw/vim-maximizer'
+Plug 'peitalin/vim-jsx-typescript'
+
 
 call plug#end()
 
