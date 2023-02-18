@@ -84,6 +84,8 @@ nnoremap <C-l> gt<CR>
 nnoremap <C-h> gT<CR>
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap <C-d> <C-d>zz 
+nnoremap <C-u> <C-u>zz 
 
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-g> :Files<CR>
