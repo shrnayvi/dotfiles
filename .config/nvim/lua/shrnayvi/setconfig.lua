@@ -1,7 +1,7 @@
 local opt = vim.opt;
 
 opt.guicursor = ""
-opt.tabstop = 2 
+opt.tabstop = 2
 opt.nu = true
 opt.relativenumber = true
 opt.softtabstop = 2
@@ -12,13 +12,15 @@ opt.shiftwidth = 2
 opt.backup = false
 opt.expandtab = true
 opt.ignorecase = true
-opt.undodir = '~/.vim/undodir'
+opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 opt.incsearch = true
 opt.hlsearch = false
 opt.laststatus = 2
 opt.background = 'dark'
-opt.colorcolumn = "120"
+opt.colorcolumn = '120'
+opt.scrolloff = 10
+
 
 require("gruvbox").setup({
   italic = {
@@ -29,4 +31,5 @@ require("gruvbox").setup({
   },
 })
 vim.cmd.colorscheme('gruvbox')
+
 
