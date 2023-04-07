@@ -65,4 +65,8 @@ use 'peitalin/vim-jsx-typescript'
 
 use 'terryma/vim-multiple-cursors'
 
+use 'neoclide/vim-jsx-improve'
+
+use 'lukas-reineke/indent-blankline.nvim'
+
 end)
