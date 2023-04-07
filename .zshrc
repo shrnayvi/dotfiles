@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/iw/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="candy"
 
@@ -21,4 +21,4 @@ alias sus="systemctl suspend"
 alias python=python3
 alias pip=pip3
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+alias vim=nvim
