@@ -59,7 +59,7 @@ use 'jiangmiao/auto-pairs'
 
 use 'nikvdp/ejs-syntax'
 
-use 'itchyny/lightline.vim'
+--use 'itchyny/lightline.vim'
 
 use 'peitalin/vim-jsx-typescript'
 
@@ -68,5 +68,7 @@ use 'terryma/vim-multiple-cursors'
 use 'neoclide/vim-jsx-improve'
 
 use 'lukas-reineke/indent-blankline.nvim'
+
+use 'vim-airline/vim-airline'
 
 end)

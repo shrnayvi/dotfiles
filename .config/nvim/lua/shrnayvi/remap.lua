@@ -2,9 +2,8 @@ local set = vim.keymap.set;
 
 vim.g.mapleader = ' '
 vim.g.NERDTreeShowHidden = 1
---vim.g.indentLine_char_list = "['┆']"
+vim.g.airline_section_c = '%F'
 --vim.g.blamer_enabled = 1
---vim.g.blamer_delay = 500
 --vim.g.NERDTreeWinPos = 'right'
 
 set('n', '<leader>h', ':wincmd h<CR>', { noremap = true })
