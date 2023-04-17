@@ -13,6 +13,7 @@ set('n', '<leader>l', ':wincmd l<CR>', { noremap = true })
 set('n', '<leader>=', ':vertical resize +5<CR>', { noremap = true })
 set('n', '<leader>-', ':vertical resize -5<CR>', { noremap = true })
 set('n', '<leader>v', ':vsplit<CR><C-w>l', { noremap = true })
+set({ 'n', 'v' }, '<leader>y', '"+y', { noremap = true })
 
 set('n', '<leader>u', vim.cmd.UndotreeToggle, { noremap = true })
 set('n', '<leader>t', vim.cmd.NERDTreeToggle, { noremap = true })
