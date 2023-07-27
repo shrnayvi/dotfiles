@@ -20,6 +20,7 @@ opt.laststatus = 2
 opt.background = 'dark'
 opt.colorcolumn = '120'
 opt.scrolloff = 10
+opt.mouse = ''
 
 
 require("gruvbox").setup({
