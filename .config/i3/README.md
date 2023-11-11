@@ -8,6 +8,8 @@
 - [Nitrogen](#nitrogen)
 - [DejaVu](#dejavu)
 - [Rofi](https://wiki.archlinux.org/title/rofi)
+- gnome-screenshot - For Screenshot
+    - xclip for copying screenshot to clipboard
 
 ## Touchpad
 ```
@@ -140,4 +142,11 @@ Install dejavu font(Arch)
 
 ```
 $ yay -S ttf-dejavu-nerd
+```
+
+## gnome-screenshot
+
+```
+$ sudo pacman -S gnome-screenshot
+$ sudo pacman -S xclip
 ```
