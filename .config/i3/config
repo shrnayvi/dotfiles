@@ -27,6 +27,9 @@ exec --no-startup-id nitrogen --restore
 # start floating terminal scratchpad 
 exec --no-startup-id alacritty -t floatingterminal -e tmux
 
+# Battery popup
+exec --no-startup-id i3-battery-popup
+
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
@@ -181,8 +184,8 @@ bar {
         font pango:DejaVuSansM Nerd Font Mono 12
         tray_output none
         status_command ~/.config/bumblebee-status/bumblebee-status \
-        -m cpu memory datetime battery network \
-        pasink pasource \
+        -m datetime battery cpu memory \
+        brightness network pasink pasource \
         -p datetime.format="%Y-%m-%d %H:%M" \
         -t solarized-powerline
 
@@ -268,8 +271,9 @@ bindsym --release Shift+Ctrl+Print exec gnome-screenshot -acf /tmp/test && cat /
 # Assign apps to workspaces 
 assign [class="Microsoft Teams - Preview"] $ws10
 assign [class="Google-chrome"] $ws2
-assign [class="ViberPC"] $ws3
-assign [class="Skype"] $ws3
+assign [class="ViberPC"] $ws4
+assign [class="Skype"] $ws4
+assign [class="Slack"] $ws4
 
 # Resolution. Change accordingly
 #exec --no-startup-id xrandr --output eDP-1 --primary --mode 1600x900 --pos 1920x0 --rotate normal
