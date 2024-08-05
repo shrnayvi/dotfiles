@@ -21,6 +21,7 @@ opt.background = 'dark'
 opt.colorcolumn = '120'
 opt.scrolloff = 10
 opt.mouse = ''
+opt.list = true
 
 
 require("gruvbox").setup({
@@ -32,5 +33,4 @@ require("gruvbox").setup({
   },
 })
 vim.cmd.colorscheme('gruvbox')
-
 

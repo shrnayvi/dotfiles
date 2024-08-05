@@ -8,8 +8,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    requires = {
+      {'nvim-lua/plenary.nvim'},
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+      {"aaronhallaert/advanced-git-search.nvim" },
+    }
   }
 
   use { "ellisonleao/gruvbox.nvim" }
@@ -67,8 +71,12 @@ use 'terryma/vim-multiple-cursors'
 
 use 'neoclide/vim-jsx-improve'
 
-use 'lukas-reineke/indent-blankline.nvim'
+use {
+  'lukas-reineke/indent-blankline.nvim',
+  tag = 'v3.5.4'
+}
 
 use 'vim-airline/vim-airline'
 
 end)
+
