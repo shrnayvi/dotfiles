@@ -49,7 +49,3 @@ set('n', '<leader>s', function()
   builtin.grep_string({ search = vim.fn.input('Grep > ') });
 end)
 
-set('n', '<leader>S', function()
-  builtin.live_grep({ search = vim.fn.input('Grep > ') });
-end)
-

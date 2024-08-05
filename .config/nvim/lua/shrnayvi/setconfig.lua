@@ -22,7 +22,7 @@ opt.colorcolumn = '120'
 opt.scrolloff = 10
 opt.mouse = ''
 opt.list = true
-
+opt.updatetime = 100
 
 require("gruvbox").setup({
   italic = {

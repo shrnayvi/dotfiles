@@ -12,5 +12,9 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
   },
+  indent = {
+    enable = true,
+    disable = { 'python', 'c'} -- these and some other langs don't work well
+  }
 }
 
