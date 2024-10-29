@@ -3,7 +3,8 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-  'tsserver',
+  --'tsserver',
+  'ts_ls',
   'gopls',
 })
 
@@ -16,6 +17,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
   ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
   ["<C-Space>"] = cmp.mapping.complete(),
+  ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 })
 
 lsp.setup_nvim_cmp({

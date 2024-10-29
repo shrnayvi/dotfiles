@@ -8,7 +8,7 @@ local telescope = require('telescope')
 
 telescope.setup({
   defaults = {
-    file_ignore_patterns = {"tests"},
+    --file_ignore_patterns = {"tests"},
     mappings = {
       i = {
         ["<C-j>"] = actions.move_selection_next,

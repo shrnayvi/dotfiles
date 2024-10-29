@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
 
 use 'jparise/vim-graphql'
 
-use 'jiangmiao/auto-pairs'
+--use 'jiangmiao/auto-pairs'
 
 use 'nikvdp/ejs-syntax'
 
@@ -77,6 +77,16 @@ use {
 }
 
 use 'vim-airline/vim-airline'
+
+use 'maxmx03/dracula.nvim'
+
+use {
+  "windwp/nvim-autopairs",
+  event = "InsertEnter",
+  config = function()
+    require("nvim-autopairs").setup {}
+  end
+}
 
 end)
 
