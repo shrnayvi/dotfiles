@@ -21,7 +21,7 @@ set('n', '<leader>f', vim.cmd.NERDTreeFind, { noremap = true })
 set('n', '<leader>b', vim.cmd.BlamerToggle, { noremap = true })
 
 --Maxmize the split window
-set('n', '<C-m>', vim.cmd.MaximizerToggle, { noremap = true })
+set('n', '<leader>m', vim.cmd.MaximizerToggle, { noremap = true })
 
 set('n', '<C-l>', 'gt<CR>', { noremap = true })
 set('n', '<C-h>', 'gT<CR>', { noremap = true })
